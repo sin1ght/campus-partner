@@ -4,4 +4,3 @@
 
 效果图:(https://upload-images.jianshu.io/upload_images/14069474-db1ea1edb97d7917.gif?imageMogr2/auto-orient/strip)
 
-![](https://upload-images.jianshu.io/upload_images/14069474-db1ea1edb97d7917.gif?imageMogr2/auto-orient/strip)

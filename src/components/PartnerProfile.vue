@@ -1,7 +1,9 @@
 <template>
     <div class="partner-profile">
         <mt-header fixed>
-            <i class="fa fa-angle-left" slot="left"></i>
+            <router-link to="/?active=home" slot="left">
+                <i class="fa fa-angle-left"></i>
+            </router-link>
             <p slot='right' class="text">在线</p>
         </mt-header>
 
@@ -156,14 +158,14 @@
                 </section>
 
                 <section>
-                    <div>聊一聊</div>
-                    <div>立即约她</div>
+                    <div @click="chatBtnClick">聊一聊</div>
+                    <div @click="$router.push('/order/add')">立即约她</div>
                 </section>
             </section>
         </transition>
 
         <footer>
-            <div>立即约ta · 25币/小时</div>
+            <div @click="$router.push('/order/add')">立即约ta · 25币/小时</div>
         </footer>
     </div>
 </template>
@@ -181,6 +183,9 @@ export default {
             this.detail_active++;
             this.detail_active%=2;
             console.log('click');
+        },
+        chatBtnClick(){//聊天
+            this.$router.push('/chatroom');
         }
     }
 }

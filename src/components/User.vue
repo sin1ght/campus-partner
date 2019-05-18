@@ -8,16 +8,16 @@
                 <img src="../assets/avatar.jpg" alt="">
                 <div class="intro">
                     <h2><span>青柠不青 </span><i class="fa fa-angle-right"></i></h2>
-                    <p><i class="fa fa-eye"></i>10个人来看过你</p>
+                    <p><i class="fa fa-eye"></i>&nbsp;10个人来看过你</p>
                 </div>
             </div>
         </header>
 
         <section class="content">
-            <mt-cell title="我的钱包">
+            <mt-cell title="我的钱包" @click.native="$router.push('/user/purse')">
                 <i slot="icon" class="fa fa-credit-card" style="color:rgb(191, 191, 9);"></i>
             </mt-cell>
-            <mt-cell title="我的订单">
+            <mt-cell title="我的订单" @click.native="$router.push('/user/order')">
                 <i slot="icon" class="fa fa-file-text" style="color:rgb(51, 183, 109);"></i>
             </mt-cell>
             <mt-cell title="我的关注">
@@ -30,6 +30,9 @@
                 <i slot="icon" class="fa fa-bell" style="color:#00CDCD;"></i>
             </mt-cell>
 
+            <mt-cell title="申请成为校园伙伴" @click.native="$router.push('/partner/auth')">
+                <i slot="icon" class="fa fa-handshake-o " style="color:rgb(241, 97, 122);"></i>
+            </mt-cell>
             <mt-cell title="创建话题">
                 <i slot="icon" class="fa fa-signing " style="color:#00B2EE;"></i>
             </mt-cell>
@@ -75,6 +78,7 @@ export default {
             display: flex;
             align-items: center;
             width: 90vw;
+            height: 13vh;
             padding: 1rem;
             box-sizing: border-box;
             border-radius: 0.5rem;
@@ -96,10 +100,12 @@ export default {
                     color: black;
                 }
             }
+            .intro p{font-size: 1.4rem};
         }
     }
 
     .content{
+        margin-top:1rem; 
         .mint-cell{
             border-bottom: 1px solid $divider_color;
 

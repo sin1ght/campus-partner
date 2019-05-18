@@ -53,8 +53,11 @@ export default {
     },
     data:function(){
         return {
-            tabbar_active:'home'
+            tabbar_active:''
         }
+    },
+    created(){
+        this.tabbar_active=this.$route.query.active || 'home';
     }
 }
 </script>

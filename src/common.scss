@@ -1,3 +1,19 @@
 $gray_font_color:#9a9696;
 $divider_color:#f1eeee;
 $theme-color:#f34b69;
+$light-theme-color:#e48899;//浅的主题色
+$header-height:40px;
+
+
+//单行文本溢出省略号
+@mixin single-line-text-overflow-ellipsis {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+
+//宽高全屏
+@mixin full-screen {
+    width: 100vw;
+    height: 100vh;
+}

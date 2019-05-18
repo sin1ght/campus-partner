@@ -4,7 +4,9 @@
             <div class="banner"></div>
 
             <mt-header fixed title="" style="background:rgb(241,74,105,0);">
-                <i class="fa fa-angle-left fa-2x" slot="left"></i>
+                <router-link to="/?active=user" slot="left">
+                    <i class="fa fa-angle-left"></i>
+                </router-link>
             </mt-header>
 
             <section class="info">
@@ -15,7 +17,7 @@
                     <div class="action">
                         <p><i class="fa fa-commenting-o"></i> 聊天</p>
                         <p class="follow"><i class="fa fa-heart-o"></i> 关注</p>
-                        <p><i class="fa fa-edit"></i> 编辑</p>
+                        <p @click="$router.push('/user/edit-profile')"><i class="fa fa-edit"></i> 编辑</p>
                     </div>
                 </div>
                 <div class="intro">

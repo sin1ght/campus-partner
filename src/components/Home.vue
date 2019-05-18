@@ -2,20 +2,22 @@
     <div id="home">
         <header>
             <div class="head">
-                <i class="fa fa-commenting-o fa-2x"></i>
-                <div class="search">
+                <router-link to="/message/123">
+                    <i class="fa fa-commenting-o fa-2x"></i> 
+                </router-link>
+                
+                <div class="search" @click="$router.push('/partner/search')">
                     <i class="fa fa-search"></i>
                     <span>(青柠不青)</span>
                 </div>
-                <i class="fa fa-plus-square-o fa-2x"></i>
             </div>
             <!-- 轮播图 -->
             <mt-swipe :auto="40000000" :speed="500">
                 <mt-swipe-item>
-                    <img src="../assets/bg1.jpg" alt="">
+                    <img src="../assets/bg3.jpg" alt="">
                 </mt-swipe-item>
                 <mt-swipe-item><img src="../assets/bg2.jpg" alt=""></mt-swipe-item>
-                <mt-swipe-item><img src="../assets/bg3.jpg" alt=""></mt-swipe-item>
+                <mt-swipe-item><img src="../assets/bg1.jpg" alt=""></mt-swipe-item>
             </mt-swipe>
         </header>
 
@@ -320,13 +322,12 @@ export default {
                 background: white;
                 height: 100%;
                 opacity: 0.5;
-                width: 50%;
+                width: 65%;
                 border-radius: 1rem;
                 display: flex;
                 align-items: center;
                 color: #a09898;
                 margin-left: 15%;
-                margin-right: 15%;
 
                 i{
                     color: #a09898;
